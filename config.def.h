@@ -14,15 +14,16 @@ static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_tokyonight[]  = "#7aa2f7";
+static const char col_tokyonight1[] = "#7aa2f7";
+static const char col_tokyonight2[] = "#b5c9f5";
 
 static const char *colors[][3]      = {
 	/*                   text            bg          border (does nothing)   */
-	[SchemeStatus]   = { col_gray4,      col_gray1,  "#000000" }, // statusbar [right]
-	[SchemeTagsSel]  = { col_tokyonight, col_gray1,  "#000000" }, // tagbar    [left]   selected
-	[SchemeTagsNorm] = { col_gray4,      col_gray1,  "#000000" }, // tagbar    [left]   unselected
-	[SchemeInfoSel]  = { col_tokyonight, col_gray1,  "#000000" }, // infobar   [middle] selected
-	[SchemeInfoNorm] = { col_gray4,      col_gray1,  "#000000" }, // infobar   [middle] unselected
+	[SchemeStatus]   = { col_gray4,       col_gray1, "#000000" }, // statusbar [right]
+	[SchemeTagsSel]  = { col_tokyonight1, col_gray1, "#000000" }, // tagbar    [left]   selected
+	[SchemeTagsNorm] = { col_gray4,       col_gray1, "#000000" }, // tagbar    [left]   unselected
+	[SchemeInfoSel]  = { col_tokyonight2, col_gray1, "#000000" }, // infobar   [middle] selected
+	[SchemeInfoNorm] = { col_gray4,       col_gray1, "#000000" }, // infobar   [middle] unselected
 };
 
 /* tagging */
@@ -66,7 +67,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_tokyonight, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_tokyonight1, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 #include <X11/XF86keysym.h>
